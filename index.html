@@ -44,7 +44,7 @@
 
             gameData.index = Math.round(Math.random());
             gameControl.innerHTML = "<h2>The Game Has Started</h2>";
-            gameControl.innerHTML += "<button id='quit'>Do You Want to quit</button>";
+            gameControl.innerHTML += "<button id='quit'>Do You Want to quit?</button>";
             
             document.getElementById('quit').addEventListener('click',function () {
                 location.reload();
@@ -100,7 +100,7 @@
 
             function checkWinningCondition() {
                     if(gameData.score[gameData.index] > gameData.gameEnd){
-                        score.innerHTML=`<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]}</h2>`;
+                        score.innerHTML=`<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index] points}</h2>`;
                         actionArea.innerHTML = "";
                         document.getElementById('quit').innerHTML = "Start a new game";
                     }
